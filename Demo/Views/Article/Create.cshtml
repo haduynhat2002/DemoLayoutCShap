@@ -1,0 +1,31 @@
+﻿@model Demo.Models.ViewModel.ArticleModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_W3SchoolLayout.cshtml";
+}
+<h2>Create</h2>
+@{ Html.BeginForm("Save", "Article", FormMethod.Post);}
+<div>
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+</div>
+<div>
+    @Html.LabelFor(model => model.Desscription)
+    @Html.EditorFor(model => model.Desscription)
+</div>
+<div>
+    @Html.LabelFor(model => model.Content)
+    @Html.EditorFor(model => model.Content)
+</div>
+<div>
+    @Html.LabelFor(model => model.Author)
+    @Html.EditorFor(model => model.Author)
+</div>
+<div>
+    @Html.LabelFor(model => model.PublicDate)
+    @Html.EditorFor(model => model.PublicDate)
+</div>
+<div>
+   <input type="submit" value="submit">
+</div>
+@{Html.EndForm();}

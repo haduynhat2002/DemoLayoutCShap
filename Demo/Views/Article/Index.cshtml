@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Demo.Models.Article>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_W3SchoolLayout.cshtml";
+}
+<h2>Index</h2>
+@foreach (var art in Model)
+{
+    <p>@art.Title</p>
+    <p>@art.Author</p>
+    <p>@art.Content</p>
+    <p>@art.Desscription</p>
+    <p>@art.PublicDate</p>
+}
